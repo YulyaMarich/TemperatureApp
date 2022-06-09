@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Temperature" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather" translatesAutoresizingMaskIntoConstraints="NO" id="6cm-2O-eCV">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3W3-Lw-FVC">
+                                <rect key="frame" x="173" y="320" width="44" height="37"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gAO-fu-ftJ">
+                                <rect key="frame" x="43" y="407" width="304" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="PaY-KG-7Dq"/>
+                                    <constraint firstAttribute="width" constant="300" id="nXs-na-8ad"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PaY-KG-7Dq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="PaY-KG-7Dq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="changeTemperature" destination="BYZ-38-t0r" eventType="valueChanged" id="W1X-ed-Btd"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="QHi-Aw-btH">
+                                <rect key="frame" x="30" y="69" width="330" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hs-Ms-ta0">
+                                <rect key="frame" x="165.33333333333334" y="487" width="59.333333333333343" height="37"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6cm-2O-eCV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="15k-mg-JqB"/>
+                            <constraint firstItem="3W3-Lw-FVC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FIs-vx-dmP"/>
+                            <constraint firstItem="gAO-fu-ftJ" firstAttribute="top" secondItem="3W3-Lw-FVC" secondAttribute="bottom" constant="50" id="GhC-B4-qVi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QHi-Aw-btH" secondAttribute="trailing" constant="30" id="NQ3-Kf-xuQ"/>
+                            <constraint firstItem="QHi-Aw-btH" firstAttribute="leading" secondItem="3W3-Lw-FVC" secondAttribute="trailing" constant="58" id="SDC-NF-CHk"/>
+                            <constraint firstItem="QHi-Aw-btH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TFg-kJ-yHD"/>
+                            <constraint firstAttribute="bottom" secondItem="6cm-2O-eCV" secondAttribute="bottom" id="cS5-DC-nmd"/>
+                            <constraint firstItem="6cm-2O-eCV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ejZ-wV-Kki"/>
+                            <constraint firstItem="QHi-Aw-btH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="fqM-gc-fXv"/>
+                            <constraint firstItem="gAO-fu-ftJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h3c-fV-CdD"/>
+                            <constraint firstItem="6cm-2O-eCV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i4E-Tk-IRP"/>
+                            <constraint firstItem="5hs-Ms-ta0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oJh-iy-lpp"/>
+                            <constraint firstItem="5hs-Ms-ta0" firstAttribute="top" secondItem="gAO-fu-ftJ" secondAttribute="bottom" constant="50" id="qsa-ZK-LUo"/>
+                            <constraint firstItem="5hs-Ms-ta0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u6r-zH-Fcv"/>
+                            <constraint firstItem="gAO-fu-ftJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zXW-53-8hJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SDC-NF-CHk"/>
+                                <exclude reference="TFg-kJ-yHD"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="NQ3-Kf-xuQ"/>
+                                <include reference="SDC-NF-CHk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="TFg-kJ-yHD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="3W3-Lw-FVC" id="93X-0H-yeh"/>
+                        <outlet property="fahrenheitLabel" destination="5hs-Ms-ta0" id="GMQ-PQ-a7R"/>
+                        <outlet property="temperatureSlider" destination="gAO-fu-ftJ" id="Mma-89-ey6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.75" y="78.260869565217391"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="weather" width="540" height="810"/>
+    </resources>
+</document>
