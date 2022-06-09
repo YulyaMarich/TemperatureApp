@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         temperatureSlider.maximumValue = 50
         temperatureSlider.minimumValue = 0
         temperatureSlider.value = 0
+        temperatureSlider.thumbTintColor = .cyan
     }
 
 }
