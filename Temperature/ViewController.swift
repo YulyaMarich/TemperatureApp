@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
     
     func initialSetUp() {
-        temperatureSlider.maximumValue = 100
+        temperatureSlider.maximumValue = 50
         temperatureSlider.minimumValue = 0
         temperatureSlider.value = 0
     }
