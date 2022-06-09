@@ -15,18 +15,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialSetUp()
+//        initialSetUp()
     }
 
     @IBAction func changeTemperature() {
         celsiusLabel.text = "\(String(format: "%.0f", temperatureSlider.value))ºC"
-        fahrenheitLabel.text = "\(String(format: "%.0f", temperatureSlider.value * 1.8 + 32 ))ºF"
+        fahrenheitLabel.text = "\(String(format: "%.0f", temperatureSlider.value * 1.5 + 32 ))ºF"
     }
     
-    func initialSetUp() {
-        temperatureSlider.maximumValue = 100
-        temperatureSlider.minimumValue = 0
-        temperatureSlider.value = 0
-    }
+//    func initialSetUp() {
+//        temperatureSlider.maximumValue = 100
+//        temperatureSlider.minimumValue = 0
+//        temperatureSlider.value = 0
+//    }
 }
 
